@@ -6,7 +6,7 @@ import { IBoook } from '../Interfaces/IBook';
 @Injectable({
   providedIn: 'root'
 })
-export class LibraryService {
+export class libraryService {
   private eventsPath = 'library';
 
   constructor(private http: HttpClient) { }

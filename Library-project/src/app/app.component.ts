@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { libraryService } from './Services/libraryservice';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  events$ = this.eventService.getEvents();
+  constructor(private eventService: libraryService) { }
 }
