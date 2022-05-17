@@ -1,0 +1,34 @@
+<div class="background">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      </div>
+
+
+      <div class="col-10">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let book of books">
+              <th scope="row">{{ book.id }}</th>
+              <th scope="row">{{ book.attributes.title }}</th>
+              <th scope="row">{{ book.attributes.author }}</th>
+              <th scope="row">{{ book.attributes.borrowed }}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</div>

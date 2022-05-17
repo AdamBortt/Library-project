@@ -1,6 +1,6 @@
 export interface IBoook {
-    id: string,
-    title: string,
-    author: string,
-    borrowed: boolean
+    id: number;
+    title: string;
+    author: string;
+    borrowed: boolean;
 }

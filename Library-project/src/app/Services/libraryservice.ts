@@ -1,17 +1,17 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
-import { IBoook } from '../Interfaces/IBook';
+// import { HttpClient } from '@angular/common/http';
+// import { Injectable } from '@angular/core';
+// import { IBoook } from '../Interfaces/IBook';
+// import axios from 'axios';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class libraryService {
-  private eventsPath = 'library';
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class libraryService {
 
-  constructor(private http: HttpClient) { }
+//   constructor(private http: HttpClient) { }
 
-  getEvents(){
-    return this.http.get<IBoook[]>(environment.apiUrl+this.eventsPath);
-  }
-}
+//   getBooks(){
+//     console.log("tried to do get")
+//     return axios.get("http://localhost:1337/api/books");
+//   }
+// }
