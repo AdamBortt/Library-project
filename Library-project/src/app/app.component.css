@@ -6,7 +6,8 @@
 }
 .col-10 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     background-color: white;
     height: 800px;
     border: 8px solid rgb(166, 97, 7);
@@ -20,4 +21,7 @@
 }
 th {
     font-family: Arial, Helvetica, sans-serif;
+}
+.button-container {
+    margin: 20px;
 }

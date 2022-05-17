@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { libraryService } from './Services/libraryservice';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './Components/modal/modal.component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
@@ -18,5 +20,10 @@ export class AppComponent implements OnInit{
     this.books = Object.values(this.results.data)
     console.log(this.books)
   }
-  constructor() { }
+
+  constructor(private modalService: NgbModal) { }
+
+  openModal() {
+    const modalRef = this.modalService.open(ModalComponent)
+  }
 }

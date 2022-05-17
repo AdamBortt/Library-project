@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h4 class="modal-title">Add new book</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        </button>
+</div>
+
+<div class="modal-body">
+    <div class="input-group input-group-sm mb-3">
+        <input placeholder="Title" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"  [(ngModel)]="AddBook.title">
+      </div>
+
+      <div class="input-group input-group-sm mb-3">
+        <input placeholder="Author" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="AddBook.author">
+      </div>
+
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck1" [(ngModel)]="AddBook.borrowed">
+        <label class="checkbox-label" for="customCheck1">is the book on loan?</label>
+      </div>
+
+      <button type="button" class="btn btn-primary" (click)="addBook()">Save</button>
+</div>
