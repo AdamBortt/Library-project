@@ -1,9 +1,6 @@
-<script src="bootstrap.min.js"></script>
 <div class="background">
   <div class="container">
-    <div class="row">
-      <div class="col">
-      </div>
+    <img src="assets/logos/library.png" class="col" width="850px" height="200px">
 
 
       <div class="col-10">
@@ -16,7 +13,8 @@
               <th scope="col">#</th>
               <th scope="col">Title</th>
               <th scope="col">Author</th>
-              <th scope="col">State</th>
+              <th scope="col">Status</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
@@ -24,15 +22,22 @@
               <th scope="row">{{ book.id }}</th>
               <th scope="row">{{ book.attributes.title }}</th>
               <th scope="row">{{ book.attributes.author }}</th>
-              <th scope="row">{{ book.attributes.borrowed }}</th>
+              <th scope="row" *ngIf="book.attributes.borrowed == true; else elseth" style="color: brown;">Borrowed</th>
+              <ng-template #elseth><th scope="row" style="color: green;">In the library</th></ng-template>
+              <th><button 
+                type="button" 
+                class="btn btn-danger" 
+                (click)="deleteBook(book.id)" 
+                style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">Delete</button>
+                <button 
+                type="button" 
+                class="btn btn-primary" 
+                (click)="changeStatusBook(book.id, book.attributes.borrowed)" 
+                style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">Change Status</button>
+              </th>
             </tr>
           </tbody>
         </table>
       </div>
-
-
-      <div class="col">
-      </div>
     </div>
   </div>
-</div>

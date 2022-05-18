@@ -1,8 +1,19 @@
 .background {
     display: flex;
+    flex-direction: column;
     align-items: flex-end;
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-    height: 939px;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e1975b 100%);
+    background-image: url("../assets/logos/tło.png");
+    height: max-content;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    width: 1000px;
 }
 .col-10 {
     display: flex;
@@ -16,12 +27,28 @@
     border-top-right-radius: 40px;
 }
 .table {
-    width: 800px;
+    width: auto;
     height: max-content;
+    margin: 20px;
+    word-wrap: normal;
 }
-th {
-    font-family: Arial, Helvetica, sans-serif;
+th:nth-child(n+1) {
+    vertical-align: middle;
+    font-size: 18px;
+    width: 200px;
+}
+th:nth-child(1) {
+    font-size: 18px;
+    width: 80px;
+}
+tbody {
+    font-family: 'Times New Roman', Times, serif
 }
 .button-container {
     margin: 20px;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
 }
